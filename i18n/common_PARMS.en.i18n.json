@@ -3,7 +3,7 @@
 		"permissions" : {
 			"CAN_ADMIN_ORGANISATIONS": "can manage organisations",
 			"CAN_ADMIN_USERS":	"can manage users",
-			"CAN_USE_DEV_MENU":	"can access developper's menu"
+			"IS_DEVELOPER":	"is developer"
 		}
 	}
 }

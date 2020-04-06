@@ -50,7 +50,7 @@
 							</ul>
 						</li>
 					{{/if}}
-					{{#if isInRole 'CAN_USE_DEV_MENU'}}
+					{{#if isInRole 'IS_DEVELOPER'}}
 						<li class="dropdown {{isActivePath regex='^/dev/'}}">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="dev"}} {{_  "routerNavBar.devMenu.title"}}<span class="caret"></span></a>
 							<ul class="dropdown-menu">

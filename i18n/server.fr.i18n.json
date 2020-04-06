@@ -1,0 +1,20 @@
+{
+	"server" : {
+		"server_PARMS" : {
+		
+		},
+		"error": {
+			"mongoInsertionFailure": 	"échec de l'opération d'insertion Mongo",
+			"notAllowedToCreateUser": 	"vous n'avez pas les droits pour créer un utilisateur",
+			"notAllowedToDeleteUser":	"vous n'avec pas les droits pour supprimer un utilisateur",
+			"userDoesNotExist":			"cet utilisateur n'existe pas",
+			"adminCannotBeDeleted":		"l'administrateur principal ne peut pas être supprimé",
+			"selfDeletionNotAllowed":	"un utilisateur ne peut pas s'enlever lui même",
+			"linksExistForThisUser":	"des liens existent pour cet utilisateur",
+			"notAllowedToModifyUser":	"vous n'avez pas les droits pour modifier un utilisateur",
+			"organisationsManagement": {
+				"notAllowed": 			"vous n'avez pas les droits pour gérer les organisations"
+			}
+		}
+	}
+}

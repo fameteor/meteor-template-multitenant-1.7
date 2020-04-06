@@ -1,0 +1,9 @@
+{
+	"adminOrganisations": {
+		"title": 				"organisations management",
+		"label" : 				"organisation",
+		"administrators":		"administrators",
+		"addButton": 			"add an organisation",
+		"modifyButton": 		"modify this organisation"
+	}
+}

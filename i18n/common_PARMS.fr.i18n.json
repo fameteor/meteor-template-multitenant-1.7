@@ -1,0 +1,9 @@
+{
+	"common_PARMS" : {
+		"permissions" : {
+			"CAN_ADMIN_ORGANISATIONS": "peut gérer les organisations",
+			"CAN_ADMIN_USERS":	"peut gérer les utilisateurs",
+			"CAN_USE_DEV_MENU":	"accède au menu développeur"
+		}
+	}
+}

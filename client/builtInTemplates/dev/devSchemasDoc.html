@@ -1,0 +1,60 @@
+<template name="devSchemasDoc">
+	<div class="row">
+		<div class="col-md-2">
+			<h2>{{> icon name="dev"}} schemas</h2>
+			{{#with schemasList}}
+				<ul>
+					{{#each .}}
+						<li><a href="/dev/schemasDoc/{{.}}">{{.}}</a></li>
+					{{/each}}
+				</ul>
+			{{else}}
+			{{/with}}
+		</div>
+		<div class="col-md-10">
+			{{#with selectedSchema}}
+				<div class="text-center"><h2>{{> icon name="dev"}} <code>{{selectedSchemaName}}</code> schema</h2></div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>property</th>
+							<th>type</th>
+							<th>label</th>
+							<th>mandatory</th>
+							<th>auto value</th>
+							<th>allowed values</th>
+							<th>links</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each properties}}
+						<tr>
+							<td><code>{{label}}</code></td>
+							<td>{{{type}}}</td>
+							<td>{{value.label}}</td>
+							<td>{{{mandatory}}}</td>
+							<td class="text-center">
+								{{#if autovalue}}
+									{{> icon name="schemaAutovalue"}}
+								{{else}}
+									-
+								{{/if}}</td>
+							<td>{{{allowedValues}}}</td>
+							<td>
+								{{#with link}}
+								<ul>
+									<li>collection : <code>{{collection}}</code></li>
+									<li>type : <code>{{linkType}}</code></li>
+								</ul>
+								{{else}}
+									-
+								{{/with}}
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			{{/with}}
+		</div>
+	</div>
+</template>

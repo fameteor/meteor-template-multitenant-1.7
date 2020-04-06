@@ -1,0 +1,8 @@
+.routerPrevNext-pseudo-button {
+	color: rgb(51, 122, 183);
+	cursor: pointer;
+}
+
+.routerPrevNext-pseudo-button:hover {
+	color: rgb(40, 96, 144);
+}

@@ -1,0 +1,81 @@
+<template name="adminUsers">
+	{{#with usersList}}
+		<div class="row">
+			<div class="col-md-8" >
+				<h2>{{> icon name="admin"}} {{_ "adminUsers.title"}} ({{hlp_count .}})</h2>
+			</div>
+			<div class="col-md-4" >
+				<br/>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "adminUsers.addButton"}}</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" >
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>{{_ "adminUsers.alias"}}</th>
+							<th>{{_ "adminUsers.email"}}</th>
+							<th>{{_ "adminUsers.lastConnection"}}</th>
+							<th>{{_ "adminUsers.permissions"}}</th>
+							<th>{{_ "adminUsers.organisations"}}</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each .}}
+						<tr>
+							<td>
+								{{> presence user=.}} {{profile.alias}}
+								{{#if isInRole 'CAN_USE_DEV_MENU'}}
+									<br/>
+									<small>({{_id}})</small>
+								{{/if}}
+							</td>
+							<td>
+								{{email}}
+							</td>
+							<td>{{status.lastLogin.date}}</td>
+							<td>
+								<ul>
+									{{#each roles}}
+										<li>{{roleTranslation .}}</li>
+									{{/each}}
+								</ul>
+							</td>
+							<td>
+								{{#with thisUserOrganisationsList}}
+									<ul>
+										{{#each .}}
+											<li>{{label}}</li>
+										{{/each}}
+									</ul>
+								{{else}}
+									{{_ "adminUsers.noOrganisationMsg"}}
+								{{/with}}
+							</td>
+							<td>
+								<button class="modifyUser btn btn-warning" title="{{_ "adminUsers.modifyButton"}}">{{> icon name="modify"}}</button>
+							</td>
+							<td>
+								<button class="deleteUser btn btn-danger" title="{{deleteButtonTitle}}" disabled="{{deleteButtonDisabled}}">{{> icon name="delete"}}</button>
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	{{else}}
+		<div class="row">
+			<div class="col-md-8" >
+				<h2>{{> icon name="admin"}} {{_ "adminUsers.title"}} (0)</h2>
+			</div>
+			<div class="col-md-4" >
+				<br/>
+				<button id="addUser" type="button" class="btn btn-primary pull-right">{{_ "adminUsers.addButton"}}</button>
+			</div>
+		</div>
+	{{/with}}
+</template>

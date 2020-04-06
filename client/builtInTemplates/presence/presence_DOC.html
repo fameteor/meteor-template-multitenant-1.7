@@ -1,0 +1,49 @@
+<template name="presence_DOC">
+	<!-- =============================================== -->
+	<h3>purpose</h3>
+	The <code>presence</code> component provides :
+	<ul>
+		<li>a template displaying an icon indicating the presence of a user (connected of disconnected).</li>
+	</ul>
+	
+	<!-- =============================================== -->
+	<h3>example</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>code</th>
+				<th>result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><pre>{{|#each usersList}}
+	{{|> presence user=.}} {{|profile.alias}} &lt;br/&gt;
+{{|/each}}</pre></td>
+				<td>{{#each usersList}}{{> presence user=.}} {{profile.alias}} <br/>{{/each}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- =============================================== -->
+	<h3>parameters</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>parameter</th>
+				<th>value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>user</code></td>
+				<td>A Meteor user object must be provided.</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<!-- =============================================== -->
+	<h3>how does it works ?</h3>
+	<p>It uses <a href="https://github.com/Meteor-Community-Packages/meteor-user-status" target="_blank">mizzao:user-status</a>.</p>
+	<p>The icons used can be changed in the client parameter file : <code>/imports/startup/client/client_PARMS.js</code>, icons <code>connectedUser</code> and <code>nonConnectedUser</code>.</p>
+</template>

@@ -1,0 +1,17 @@
+{
+	"schemas": {
+		"userForm" : {
+			"alias": 		"alias",
+			"email": 		"e-mail",
+			"password": 	"password",
+			"roles":		"permissions"
+		},
+		"organisation" : {
+			"label":			"name",
+			"administrators": 	"administrators",
+			"createdBy":		"created by",
+			"createdAt":		"created at",
+			"lastUpdateAt":		"last update at"
+		}
+	}
+}

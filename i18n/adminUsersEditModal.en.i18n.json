@@ -1,0 +1,18 @@
+{
+	"adminUsersEditModal": {
+		"addTitle":				"add a user",
+		"modifyTitle":			"modify a user",
+		"deleteTitle":			"delete a user",
+		"addButton":			"add",
+		"modifyButton":			"modify",
+		"deleteButton":			"delete",
+		"cancelButton":			"cancel",
+		"deleteMsg":			"<strong>Attention, you are going to delete permanently user <code>%s</code></strong>, do you want to carry on ?",
+		"insertSuccessMsg":		"user added",
+		"insertErrorMsg":		"impossible to add this user : ",
+		"modifySuccessMsg":		"user modified",
+		"modifyErrorMsg":		"impossible to modify this user : ",
+		"deleteSuccessMsg":		"user deleted",
+		"deleteErrorMsg":		"impossible to delete this user : "
+	}
+}

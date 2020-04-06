@@ -1,0 +1,11 @@
+<template name="routerServerStatus">
+	<li>
+		<p class="navbar-text">
+			{{#if (hlp_eq status "connected")}}
+				<span class="text-success" title="{{_  'routerServerStatus.connected'}}">{{> icon name="connected"}}</span>
+			{{else}}
+				<span class="text-danger" title="{{_  'routerServerStatus.disconnected'}}">{{> icon name="disconnected"}}</span>
+			{{/if}}
+		</p>
+	</li>
+</template>

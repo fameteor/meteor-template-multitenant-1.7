@@ -1,0 +1,17 @@
+{
+	"adminUsers": {
+		"title": 				"gestion des utilisateurs",
+		"alias":				"alias",
+		"email":				"e-mail",
+		"lastConnection":		"dernière connexion",
+		"permissions":			"permissions",
+		"addButton": 			"ajouter un utilisateur",
+		"modifyButton": 		"modifier un utilisateur",
+		"deleteButton": 		"supprimer un utilisateur",
+		"noSelfDeletionMsg":	"impossible de se supprimer soi-même",
+		"noAdminDeletionMsg":	"impossible de supprimer l'administrateur",
+		"deletionImpossibleMsg":"impossible de supprimer cet utilisateur",
+		"organisations":		"organisations",
+		"noOrganisationMsg":	"pas d'organisation associée à cet utilisateur"
+	}
+}

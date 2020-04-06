@@ -1,0 +1,72 @@
+<template name="adminUsersEditModal">
+	<div class="modal fade">
+		<div class="modal-dialog std-modal">
+			<div class="modal-content">
+					<!-- HEADER ========== -->
+					<div class="modal-header {{modalPopupHeaderClass}}">
+						{{#if hlp_eq action "INSERT"}}
+							{{_ "adminUsersEditModal.addTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "UPDATE"}}
+							{{_ "adminUsersEditModal.modifyTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "DELETE"}}
+							{{_ "adminUsersEditModal.deleteTitle"}}
+						{{/if}}
+					</div>
+					<!-- BODY ======== -->
+					<div class="modal-body row">
+						<div class="col-sm-12">
+							{{#if hlp_eq action "INSERT"}}
+								{{#autoForm
+									id=					"insertUserForm" 
+									schema=				userForm
+									type=				"method"
+									meteormethod=		"addUser"
+									template=			"bootstrap3-horizontal" 
+									label-class=		"col-sm-3" 
+									input-col-class=	"col-sm-9"}}
+									{{> afQuickFields}}
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-primary">{{_ "adminUsersEditModal.addButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "UPDATE"}}
+								{{#autoForm
+									id=					"modifyUserForm" 
+									schema=				userForm
+									type=				"method-update"
+									doc=				docParsed
+									meteormethod=		"modifyUser"
+									template=			"bootstrap3-horizontal" 
+									label-class=		"col-sm-3" 
+									input-col-class=	"col-sm-9"}}
+									{{> afQuickFields}}
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-warning">{{_ "adminUsersEditModal.modifyButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "DELETE"}}
+								<center>
+									<p>
+										{{{_ "adminUsersEditModal.deleteMsg" doc.profile.alias}}}
+									</p>
+									<br/>
+									<button type="button" class="btn btn-danger boutonSupprimer">{{_ "adminUsersEditModal.deleteButton"}}</button>
+									<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminUsersEditModal.cancelButton"}}</button>
+								</center>
+							{{/if}}
+						</div>
+					</div>
+			</div>
+		</div>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+{
+	"routerNavBar" : {
+		"adminMenu" :	{
+			"title" : "admin",
+			"organisationsManagement" : "gestion des organisations",
+			"usersManagement" : "gestion des utilisateurs"
+		},
+		"devMenu" :	{
+			"title" : 		"dev",
+			"tplDoc": 		"documentation des templates",
+			"schemasDoc":	"schémas des données"
+		}
+	}
+}

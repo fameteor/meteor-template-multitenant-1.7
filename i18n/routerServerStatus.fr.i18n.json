@@ -1,0 +1,6 @@
+{
+	"routerServerStatus": {
+		"connected":	"connecté au serveur",
+		"disconnected": "déconnecté du serveur"
+	}
+}

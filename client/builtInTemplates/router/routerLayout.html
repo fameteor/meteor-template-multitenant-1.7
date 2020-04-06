@@ -1,0 +1,18 @@
+<template name="routerLayout">
+	<header>
+		{{> routerNavBar}}
+	</header>
+	<article>
+		<div class="container-fluid">
+			{{> Template.dynamic template=main}}
+		</div>
+	</article>
+	{{#if hlp_sessionVar 'waitingStatus'}}
+		<div class="routerLayout-waitingContainer">
+			<div class="routerLayout-waitingMsgContainer">
+				<h2>{{_ (hlp_sessionVar "waitingMsg")}}</h2>
+				<h2>{{> icon name="waiting"}}</h2>
+			</div>
+		</div>
+	{{/if}}
+</template>

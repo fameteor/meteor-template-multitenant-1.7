@@ -1,0 +1,22 @@
+{
+	"adminOrganisationsEditModal" : {
+		"addTitle" : 		"add an organisation",
+		"modifyTitle" : 	"modify an organisation",
+		"deleteTitle" : 	"delete an organisation",
+		"addButton":		"add",
+		"modifyButton":		"modify",
+		"deleteButton":		"delete",
+		"cancelButton":		"cancel",
+		"deleteMsg":		"<strong>Caution</strong> : you are going to delete <code>%s</code> organisation forever, do you want to carry on ?",
+		"deleteError":		"organisation deletion impossible : %s",
+		"deletedMsg":		"organisation deleted",
+		"insertOrganisationForm" : {
+			"success":		"organisation added",
+			"error":		"impossible to add this organisation : %s"
+		},
+		"updateOrganisationForm": {
+			"success":		"organisation modified",
+			"error":		"impossible to modify this organisation : %s"
+		}
+	}
+}

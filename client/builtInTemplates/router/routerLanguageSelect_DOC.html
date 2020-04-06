@@ -1,0 +1,40 @@
+<template name="routerLanguageSelect_DOC">
+
+	<!-- =============================================== -->
+	<h3>purpose</h3>
+	The <code>routerLanguageSelect</code> component displays a Bootstrap 3 <code>&lt;li class="dropdown"&gt;&lt;/li&gt;</code> selection list that can be directly integrated in a Bootstrap 3 navigation bar.
+	
+	<!-- =============================================== -->
+	<h3>example</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>code</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>{{|> langageSelect}}</code></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- =============================================== -->
+	<h3>parameters</h3>
+	<p>None</p>
+	
+	<!-- =============================================== -->
+	<h3>how does it works ?</h3>
+	<p>A global session variable <code>language</code> is used to defined the language of UI.</p>
+	<p>On startup, the session variable <code>language</code> is loaded from the client parameters <code>/imports/ui/startup/client/client_PARMS.js</code>, property<code>defaultLanguage</code>.</p>
+	<p>The available languages are defined in the client parameters <code>/imports/ui/startup/client/client_PARMS.js</code>, property<code>languages</code>.</p>
+	<p>When a user logs in, the session variable <code>language</code> is loaded from the user's <code>profile.language</code> parameter if it exists.</p>
+	<p>
+		When clicking on another langage, 2 actions are done :
+		<ul>
+			<li>the session variable <code>language</code> is changed to the new value.</li>
+			<li>if a user is logged in, the user's <code>profile.language</code> parameter is changed to the new value.</li>
+		</ul>
+	</p>
+	<p>When the session variable <code>language</code> changes, a function (<code>/client/main.js</code>) is re-run to change the language setting (in the different modules like TAP:i18n, moment ...).</p>
+</template>

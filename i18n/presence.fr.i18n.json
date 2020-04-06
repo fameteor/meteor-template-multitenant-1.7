@@ -1,0 +1,6 @@
+{
+	"presence" : {
+		"connectedUser": 		"utilisateur connecté",
+		"nonConnectedUser": 	"utilisateur non connecté"
+	}
+}

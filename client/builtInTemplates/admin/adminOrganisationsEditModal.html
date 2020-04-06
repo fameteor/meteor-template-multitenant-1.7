@@ -1,0 +1,62 @@
+<!-- ===================================== -->
+<!-- TEMPLATE adminOrganisationsEditModal  -->
+<!-- ===================================== -->
+<template name="adminOrganisationsEditModal">
+	<div class="modal fade">
+		<div class="modal-dialog std-modal">
+			<div class="modal-content">
+					<!-- HEADER ========== -->
+					<div class="modal-header {{modalPopupHeaderClass}}">
+						{{#if hlp_eq action "INSERT"}}
+							{{_ "adminOrganisationsEditModal.addTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "UPDATE"}}
+							{{_ "adminOrganisationsEditModal.modifyTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "DELETE"}}
+							{{_ "adminOrganisationsEditModal.deleteTitle"}}
+						{{/if}}
+					</div>
+					<!-- BODY ======== -->
+					<div class="modal-body row">
+						<div class="col-sm-12">
+							{{#if hlp_eq action "INSERT"}}
+								{{#autoForm collection="Organisations" id="insertOrganisationForm" type="insert"}}
+									{{> adminOrganisationsEditModalForm}}
+									<br/>
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-primary">{{_ "adminOrganisationsEditModal.addButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminOrganisationsEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "UPDATE"}}
+								{{#autoForm collection="Organisations" doc=doc id="updateOrganisationForm" type="update"}}
+									{{> adminOrganisationsEditModalForm}}
+									<br/>
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-warning">{{_ "adminOrganisationsEditModal.modifyButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminOrganisationsEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "DELETE"}}
+								<center>
+									<p>
+										{{{_ "adminOrganisationsEditModal.deleteMsg" doc.label}}}
+									</p>
+									<br/>
+									<button type="button" class="btn btn-danger boutonSupprimer">{{_ "adminOrganisationsEditModal.deleteButton"}}</button>
+									<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "adminOrganisationsEditModal.cancelButton"}}</button>
+								</center>
+							{{/if}}
+						</div>
+					</div>
+			</div>
+		</div>
+    </div>
+</template>

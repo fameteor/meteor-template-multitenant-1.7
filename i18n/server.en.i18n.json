@@ -1,0 +1,20 @@
+{
+	"server" : {
+		"server_PARMS" : {
+		
+		},
+		"error": {
+			"mongoInsertionFailure": 	"Mongo insertion failure",
+			"notAllowedToCreateUser": 	"you don't have the rights to create a user",
+			"notAllowedToDeleteUser":	"you don't have the rights to delete a user",
+			"userDoesNotExist":			"this user does not exists",
+			"adminCannotBeDeleted":		"the main admin cannot be deleted",
+			"selfDeletionNotAllowed":	"self deletion is not allowed",
+			"linksExistForThisUser":	"links exist for this user",
+			"notAllowedToModifyUser":	"you don't have the rights to modify a user",
+			"organisationsManagement": {
+				"notAllowed": 			"you don't have the rights for organisations management"
+			}
+		}
+	}
+}

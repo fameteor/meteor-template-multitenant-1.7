@@ -1,0 +1,10 @@
+<template name="routerHome">
+	<div class="jumbotron text-center">
+		<h2>{{_ "routerHome.msg"}}</h2>
+		
+		<!-- If not logged in ============ -->
+		{{#unless currentUser}}
+			<h3 class="text-success">{{_ "routerHome.logInMsg"}}</h3>
+		{{/unless}}
+	</div>
+</template>

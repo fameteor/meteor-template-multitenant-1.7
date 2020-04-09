@@ -1,0 +1,9 @@
+{
+	"tenantManagement": {
+		"title": 				"tenants management",
+		"label" : 				"tenant",
+		"administrators":		"administrators",
+		"addButton": 			"add a tenant",
+		"modifyButton": 		"modify this tenant"
+	}
+}

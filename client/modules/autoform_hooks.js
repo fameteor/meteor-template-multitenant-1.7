@@ -5,35 +5,35 @@ Meteor.startup(function () {
 	
 	AutoForm.hooks({
 		// For the organisations
-		"insertOrganisationForm" : {
+		"insertTenantForm" : {
 			// Called when any submit operation succeeds
 			onSuccess: function(formType, result) {
 				// On ferme la popup
 				$('.modal').modal('hide');
 				// On affiche la popup success
-				toastr.success(TAPi18n.__("adminOrganisationsEditModal.insertOrganisationForm.success"));
+				toastr.success(TAPi18n.__("tenantManagementEditModal.insertTenantForm.success"));
 			},
 			// Called when any submit operation fails
 			onError: function(formType, error) {
 				// On affiche la popup erreur
 				if (error.reason != undefined) {
-					toastr.warning(TAPi18n.__("adminOrganisationsEditModal.insertOrganisationForm.error",error.reason));
+					toastr.warning(TAPi18n.__("tenantManagementEditModal.insertTenantForm.error") + TAPi18n.__(error.reason));
 				}
 			}
 		},
-		"updateOrganisationForm" : {
+		"updateTenantForm" : {
 			// Called when any submit operation succeeds
 			onSuccess: function(formType, result) {
 				// On ferme la popup
 				$('.modal').modal('hide');
 				// On affiche la popup success
-				toastr.success(TAPi18n.__("adminOrganisationsEditModal.updateOrganisationForm.success"));
+				toastr.success(TAPi18n.__("tenantManagementEditModal.updateTenantForm.success"));
 			},
 			// Called when any submit operation fails
 			onError: function(formType, error) {
 				// On affiche la popup erreur
 				if (error.reason != undefined) {
-					toastr.warning(TAPi18n.__("adminOrganisationsEditModal.updateOrganisationForm.error",error.reason));
+					toastr.warning(TAPi18n.__("tenantManagementEditModal.updateTenantForm.error") + TAPi18n.__(error.reason));
 				}
 			}
 		},

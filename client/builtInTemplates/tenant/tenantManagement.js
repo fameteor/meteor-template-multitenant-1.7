@@ -1,6 +1,6 @@
-Template.adminOrganisations.helpers({
-	organisationsList() {
-		return Organisations.find({},{sort: { label: 1 }}).fetch();
+Template.tenantManagement.helpers({
+	tenantsList() {
+		return Tenants.find({},{sort: { label: 1 }}).fetch();
 	},
 	deleteDisabled() {
 		/*
@@ -18,17 +18,17 @@ Template.adminOrganisations.helpers({
 	}
 });
 
-Template.adminOrganisations.events({
+Template.tenantManagement.events({
 	'click #add'(e,tpl){
 		e.preventDefault();
-		Modal.show("adminOrganisationsEditModal",{action:"INSERT"},{backdrop:'static',keyboard:false});
+		Modal.show("tenantManagementEditModal",{action:"INSERT"},{backdrop:'static',keyboard:false});
 	},
 	'click .modify'(e,tpl){
 		e.preventDefault();
-		Modal.show("adminOrganisationsEditModal",{action:"UPDATE","doc":this},{backdrop:'static',keyboard:false});
+		Modal.show("tenantManagementEditModal",{action:"UPDATE","doc":this},{backdrop:'static',keyboard:false});
 	},
 	'click .delete'(e,tpl){
 		e.preventDefault();
-		Modal.show("adminOrganisationsEditModal",{action:"DELETE","doc":this},{backdrop:'static',keyboard:false});
+		Modal.show("tenantManagementEditModal",{action:"DELETE","doc":this},{backdrop:'static',keyboard:false});
 	}
 });

@@ -1,7 +1,7 @@
 // ==============================================
-// TEMPLATE adminOrganisationsEditModal
+// TEMPLATE tenantManagementEditModal
 // ==============================================
-Template.adminOrganisationsEditModal.helpers({
+Template.tenantManagementEditModal.helpers({
 	modalPopupHeaderClass() {
 		switch (this.action) {
 			case "INSERT":
@@ -20,20 +20,20 @@ Template.adminOrganisationsEditModal.helpers({
 	}
 });
 
-Template.adminOrganisationsEditModal.events = {
+Template.tenantManagementEditModal.events = {
 	"click .boutonSupprimer" :  function(e,tpl) {
 		e.preventDefault();
 		// We deleted the corresponding parcel
-		Organisations.remove(
+		Tenants.remove(
 			Template.parentData(0).doc._id,
 			function(error,nb) {
-				if (error) 	toastr.warning(TAPi18n.__("adminOrganisationsEditModal.deleteError",error.reason));
+				if (error) 	toastr.warning(TAPi18n.__("tenantManagementEditModal.deleteError",error.reason));
 				else {
-					if (nb == 0) toastr.warning(TAPi18n.__("adminOrganisationsEditModal.deletedMsgNothing"));
+					if (nb == 0) toastr.warning(TAPi18n.__("tenantManagementEditModal.deletedMsgNothing"));
 					else {
 						// On ferme la popup (si plusieurs modales)
 						Modal.hide(Template.instance());
-						toastr.success(TAPi18n.__("adminOrganisationsEditModal.deletedMsg",{"count":nb}));
+						toastr.success(TAPi18n.__("tenantManagementEditModal.deletedMsg",{"count":nb}));
 					}
 				}
 			}

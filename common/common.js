@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 
 // Collections -----------------------------------------
-Organisations = new Mongo.Collection('organisations');
+Tenants = new Mongo.Collection('tenants');
 
 // Schemas attachment ----------------------------------
-Organisations.attachSchema(schemas.organisation);
+Tenants.attachSchema(schemas.tenant);

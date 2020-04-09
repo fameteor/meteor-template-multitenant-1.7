@@ -18,7 +18,7 @@
 				<ul class="nav navbar-nav">
 					{{> routerPrevNext}}
 				</ul>
-				{{> routerOrganisationSelect}}
+				{{> tenantSelect}}
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{_  "routerNavBar.configurationMenu.title"}}<span class="caret"></span></a>
@@ -35,12 +35,12 @@
 			{{/if}}
 			<ul class="nav navbar-nav navbar-right">
 				{{#if currentUser}}
-					{{#if isInRole 'CAN_ADMIN_USERS, CAN_ADMIN_ORGANISATIONS'}}
+					{{#if isInRole 'CAN_ADMIN_USERS, CAN_ADMIN_TENANTS'}}
 						<li class="dropdown {{isActivePath regex='^/admin/'}}">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="admin"}} {{_  "routerNavBar.adminMenu.title"}}<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								{{#if isInRole 'CAN_ADMIN_ORGANISATIONS'}}
-									<li class="{{isActivePath '/admin/organisations'}}"><a href="/admin/organisations">{{_  "routerNavBar.adminMenu.organisationsManagement"}}</a></li>
+								{{#if isInRole 'CAN_ADMIN_TENANTS'}}
+									<li class="{{isActivePath '/admin/organisations'}}"><a href="/admin/organisations">{{_  "routerNavBar.adminMenu.tenantManagement"}}</a></li>
 								{{/if}}
 								{{#if isInRole 'CAN_ADMIN_USERS'}}
 									<li class="{{isActivePath '/admin/users'}}"><a href="/admin/users">{{_  "routerNavBar.adminMenu.usersManagement"}}</a></li>

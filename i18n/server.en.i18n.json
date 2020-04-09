@@ -12,8 +12,8 @@
 			"selfDeletionNotAllowed":	"self deletion is not allowed",
 			"linksExistForThisUser":	"links exist for this user",
 			"notAllowedToModifyUser":	"you don't have the rights to modify a user",
-			"organisationsManagement": {
-				"notAllowed": 			"you don't have the rights for organisations management"
+			"tenantManagement": {
+				"notAllowed": 			"you don't have the rights for tenants management"
 			}
 		}
 	}

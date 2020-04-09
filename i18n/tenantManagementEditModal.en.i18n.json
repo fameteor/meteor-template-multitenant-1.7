@@ -1,0 +1,22 @@
+{
+	"tenantManagementEditModal" : {
+		"addTitle" : 		"add a tenant",
+		"modifyTitle" : 	"modify a tenant",
+		"deleteTitle" : 	"delete a tenant",
+		"addButton":		"add",
+		"modifyButton":		"modify",
+		"deleteButton":		"delete",
+		"cancelButton":		"cancel",
+		"deleteMsg":		"<strong>Caution</strong> : you are going to delete <code>%s</code> tenant forever, do you want to carry on ?",
+		"deleteError":		"tenant deletion impossible : %s",
+		"deletedMsg":		"tenant deleted",
+		"insertTenantForm" : {
+			"success":		"tenant added",
+			"error":		"impossible to add this tenant : "
+		},
+		"updateTenantForm": {
+			"success":		"tenant modified",
+			"error":		"impossible to modify this tenant : "
+		}
+	}
+}

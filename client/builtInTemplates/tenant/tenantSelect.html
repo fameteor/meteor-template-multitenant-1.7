@@ -1,0 +1,18 @@
+<template name="tenantSelect">
+	<form class="navbar-form navbar-left">
+		<div class="form-group">
+			{{#if allowedPath}}
+				{{#with tenantsList}}
+					{{#if (hlp_gt (hlp_count .) 1)}}
+						<select type="text" class="form-control tenantSelect">
+							{{#each .}}
+								<option value="{{_id}}" {{hlp_selectedIf (hlp_eq _id (hlp_sessionVar "selectedTenantId"))}}>{{_ "tenantSelect.tenant"}} : {{label}}</option>
+							{{/each}}
+						</select>
+					{{/if}}
+				{{/with}}
+			{{/if}}
+		</div>
+	</form>
+</template>
+

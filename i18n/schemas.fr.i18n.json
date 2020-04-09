@@ -6,7 +6,7 @@
 			"password": 	"mot de passe",
 			"roles":		"permissions"
 		},
-		"organisation" : {
+		"tenant" : {
 			"label":			"nom",
 			"administrators": 	"administrateurs",
 			"createdBy":		"créé par",

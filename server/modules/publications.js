@@ -21,11 +21,11 @@ Meteor.startup(() => {
 		);
 	});
 	
-	 Meteor.publish("organisations.myOrAllForAdmin", function () {
-        // Only if user CAN_ADMIN_ORGANISATIONS
-        if (Roles.userIsInRole(this.userId, 'CAN_ADMIN_ORGANISATIONS')) return Organisations.find({});
-        // Else : only organisations where the connected user is administrator
-        else return Organisations.find({administrators: Meteor.userId()});
+	 Meteor.publish("tenants.myTenants", function () {
+        // Only if user CAN_ADMIN_TENANTS
+        if (Roles.userIsInRole(this.userId, 'CAN_ADMIN_TENANTS')) return Tenants.find({});
+        // Else : only tenants where the connected user is administrator
+        else return Tenants.find({administrators: Meteor.userId()});
     });
 
 	// ------------------------------------------------------------------

@@ -1,0 +1,62 @@
+<!-- ===================================== -->
+<!-- TEMPLATE tenantManagementEditModal  -->
+<!-- ===================================== -->
+<template name="tenantManagementEditModal">
+	<div class="modal fade">
+		<div class="modal-dialog std-modal">
+			<div class="modal-content">
+					<!-- HEADER ========== -->
+					<div class="modal-header {{modalPopupHeaderClass}}">
+						{{#if hlp_eq action "INSERT"}}
+							{{_ "tenantManagementEditModal.addTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "UPDATE"}}
+							{{_ "tenantManagementEditModal.modifyTitle"}}
+						{{/if}}
+						{{#if hlp_eq action "DELETE"}}
+							{{_ "tenantManagementEditModal.deleteTitle"}}
+						{{/if}}
+					</div>
+					<!-- BODY ======== -->
+					<div class="modal-body row">
+						<div class="col-sm-12">
+							{{#if hlp_eq action "INSERT"}}
+								{{#autoForm collection="Tenants" id="insertTenantForm" type="insert"}}
+									{{> tenantManagementEditModalForm}}
+									<br/>
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-primary">{{_ "tenantManagementEditModal.addButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "tenantManagementEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "UPDATE"}}
+								{{#autoForm collection="Tenants" doc=doc id="updateTenantForm" type="update"}}
+									{{> tenantManagementEditModalForm}}
+									<br/>
+									<div class="row">
+										<div class="col-sm-12 text-center">
+											<button type="submit" class="btn btn-warning">{{_ "tenantManagementEditModal.modifyButton"}}</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "tenantManagementEditModal.cancelButton"}}</button>
+										</div>
+									</div>
+								{{/autoForm}}
+							{{/if}}
+							{{#if hlp_eq action "DELETE"}}
+								<center>
+									<p>
+										{{{_ "tenantManagementEditModal.deleteMsg" doc.label}}}
+									</p>
+									<br/>
+									<button type="button" class="btn btn-danger boutonSupprimer">{{_ "tenantManagementEditModal.deleteButton"}}</button>
+									<button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{_ "tenantManagementEditModal.cancelButton"}}</button>
+								</center>
+							{{/if}}
+						</div>
+					</div>
+			</div>
+		</div>
+    </div>
+</template>

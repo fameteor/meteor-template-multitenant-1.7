@@ -1,0 +1,43 @@
+<template name="tenantSelect_builtInTemplateDOC">
+	<!-- =============================================== -->
+	<h3>purpose</h3>
+	<p>When the connected user is administrator for at least 2 tenants and <b>if the current path is allowed</b> (see hereunder), the <code>tenantSelect</code> template displays an HTML form containing a <code>select</code> menu to choose a tenant.</p>
+	<p>If the connected user is administrator for only 1 (or even 0) tenant, nothing is displayed.</p>
+	<p>On application load, a <code>selectedTenantId</code> session variable is created with <code>null</code> value if the connected user is not administrator for any tenant. The <code>selectedTenantId</code> session variable is set with the <code>_id</code> of the first (or only) tenant if the connected user is administrator for 1 or more tenant.</p>
+	<p>When changing the tenant, the <code>selectedTenantId</code> session variable is set with the <code>_id</code> of the selected tenant.</p>
+	<p>The allowed path are defined in the <code>client_PARMS.tenantSelect_allowedPathContains</code> file :
+	<pre>{{tenantSelect_allowedPathContains}}</pre>
+	</p>
+	<p>When no tenant is choosen, the application code should not allow the user to create any object linked to the tenant, nor even display a template doing so.</p>
+	
+	<!-- =============================================== -->
+	<h3>examples</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>code</th>
+				<th>result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><pre>{{|> tenantSelect}} &lt;code&gt;{{|hlp_sessionVar "selectedTenantId"}}&lt;/code&gt;</pre></td>
+				<td>{{> tenantSelect}} <code>{{hlp_sessionVar "selectedTenantId"}}</code></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- =============================================== -->
+	<h3>parameters</h3>
+	<p>This template do not have any parameter.</p>
+	
+	<!-- =============================================== -->
+	<h3>how does it works ?</h3>
+	<p>The <code>selectedTenantId</code> session variable is initialised to <code>null</code> in the <code>/client/modules/session_variables.js</code> module. When the <code>Tenants</code> subscription is ready, the <code>selectedTenantId</code> session variable is set to the right value in the <code>/client/onGlobalCollectionsLoaded.js</code> module.</p>
+
+	<!-- =============================================== -->
+	<h3>enhancements</h3>
+	<ul>
+		<li>Nothing at the moment.</li>
+	</ul>
+</template>

@@ -9,7 +9,7 @@
 		},
 		"adminMenu" :	{
 			"title" : "admin",
-			"organisationsManagement" : "organisations management",
+			"tenantManagement" : "tenants management",
 			"usersManagement" : "users management"
 		},
 		"devMenu" :	{

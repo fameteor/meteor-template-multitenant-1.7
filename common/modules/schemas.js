@@ -135,10 +135,10 @@ schemas.essai = new SimpleSchema({
 	}
 },{tracker:Tracker});
 
-schemas.organisation = new SimpleSchema({
+schemas.tenant = new SimpleSchema({
     "label": {
 		type: String,
-		label: function() { return TAPi18n.__("schemas.organisation.label");},
+		label: function() { return TAPi18n.__("schemas.tenant.label");},
 		autoform: {
 			autocomplete: "off"
 		},
@@ -146,7 +146,7 @@ schemas.organisation = new SimpleSchema({
 	},
     "administrators": {
 		type: Array,
-		label: function() { return TAPi18n.__("schemas.organisation.administrators");},
+		label: function() { return TAPi18n.__("schemas.tenant.administrators");},
 		autoform: {
 			type: 'select-checkbox',
 			options:  function() {
@@ -166,7 +166,7 @@ schemas.organisation = new SimpleSchema({
 	},
 	"administrators.$": {
 		type:	 	String,
-		label: function() { return TAPi18n.__("schemas.organisation.administrators");},
+		label: function() { return TAPi18n.__("schemas.tenant.administrators");},
 		allowedValues: function() {
 			var administratorsList = Meteor.users.find().fetch();
 			return administratorsList.map(function(obj) {
@@ -178,7 +178,7 @@ schemas.organisation = new SimpleSchema({
 	},
 	"createdBy": {
 		type: String,
-		label: function() { return TAPi18n.__("schemas.organisation.createdBy");},
+		label: function() { return TAPi18n.__("schemas.tenant.createdBy");},
 		optional: 	true,
 		// Force value to the creator id at creation, not modified after
 		autoValue: function() {
@@ -188,7 +188,7 @@ schemas.organisation = new SimpleSchema({
 	},
 	"createdAt" : {
 		type: Date,
-		label: function() { return TAPi18n.__("schemas.organisation.createdAt");},
+		label: function() { return TAPi18n.__("schemas.tenant.createdAt");},
 		optional: 	false,
 		// Force value to be current date (on server) upon insert only
 		autoValue: function() {
@@ -198,7 +198,7 @@ schemas.organisation = new SimpleSchema({
 	},
 	"lastUpdateAt" : {
 		type: Date,
-		label: function() { return TAPi18n.__("schemas.organisation.lastUpdateAt");},
+		label: function() { return TAPi18n.__("schemas.tenant.lastUpdateAt");},
 		optional: 	false,
 		// Force value to be current date (on server) upon insert and update
 		autoValue: function() {

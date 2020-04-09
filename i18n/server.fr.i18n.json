@@ -12,8 +12,8 @@
 			"selfDeletionNotAllowed":	"un utilisateur ne peut pas s'enlever lui même",
 			"linksExistForThisUser":	"des liens existent pour cet utilisateur",
 			"notAllowedToModifyUser":	"vous n'avez pas les droits pour modifier un utilisateur",
-			"organisationsManagement": {
-				"notAllowed": 			"vous n'avez pas les droits pour gérer les organisations"
+			"tenantManagement": {
+				"notAllowed": 			"vous n'avez pas les droits pour gérer les tenants"
 			}
 		}
 	}

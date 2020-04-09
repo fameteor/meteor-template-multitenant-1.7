@@ -24,7 +24,7 @@ Tracker.autorun(function() {
 // Global subscriptions
 FlowRouter.subscriptions = function(params, queryparams) {
 	this.register('users.meOrAllForAdmin', Meteor.subscribe('users.meOrAllForAdmin'));
-	this.register('organisations.myOrAllForAdmin', Meteor.subscribe('organisations.myOrAllForAdmin'));
+	this.register('tenants.myTenants', Meteor.subscribe('tenants.myTenants'));
 }
 
 // To run once only

@@ -1,4 +1,4 @@
-Template.icon_comp_doc.helpers({
+Template.icon_builtInTemplateDOC.helpers({
 	iconList() {
 		return Object.keys(client_PARMS && client_PARMS.icons);
 	},

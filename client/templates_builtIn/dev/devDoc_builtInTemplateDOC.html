@@ -1,0 +1,24 @@
+<template name="devDoc_builtInTemplateDOC">
+	<!-- =============================================== -->
+	<h3>purpose</h3>
+	<p>The <code>devDoc</code> template displays the documentation on templates.</p>
+	
+	
+	<!-- =============================================== -->
+	<h3>parameters</h3>
+	<p>This template do not have any parameter.</p>
+	
+	<!-- =============================================== -->
+	<h3>how does it works ?</h3>
+	<p>If you want to document a template named for instance <code>demo</code>, simply create a documentation template with the same name suffixed with a specific code, for instance <code>_myAppTemplateDOC</code> code (the documentation template would thus be <code>demo_myAppTemplateDOC</code>). There should not be any other template with the same name.</p>
+	<p>The template <code>devDoc</code> will list in one chapter all templates documentations ending with the suffix <code>_myAppTemplateDOC</code> in alphabetical order.</p>
+	<p>If you want to create differents chapters of documentation, you just have to define them in the <code>client/modules_myApp/client_PARMS.js</code>, <code>devDoc_chapters</code> property that specifies a specific suffix code by chapter, for instance, currently, the settings are :
+	<pre><code>{{devDoc_chapters}}</code></pre>
+	</p>
+	
+	<!-- =============================================== -->
+	<h3>enhancements</h3>
+	<ul>
+		<li>Nothing at the moment.</li>
+	</ul>
+</template>

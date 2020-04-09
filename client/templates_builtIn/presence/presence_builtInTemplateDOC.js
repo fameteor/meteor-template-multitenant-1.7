@@ -1,4 +1,4 @@
-Template.presence_DOC.helpers({
+Template.presence_builtInTemplateDOC.helpers({
 	usersList : function() {
 		return Meteor.users.find().fetch();
 	}

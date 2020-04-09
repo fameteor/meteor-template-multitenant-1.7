@@ -1,27 +1,28 @@
-<template name="docTemplate_builtInTemplateDOC">
+<template name="icon_builtInTemplateDOC">
 	<!-- =============================================== -->
 	<h3>purpose</h3>
-	The <code>docTemplate</code> template is just a template on how to structure the templates documentation.
+	<p>The <code>icon</code> template displays the icon corresponding to the <code>name</code> parameter.</p>
 	
 	<!-- =============================================== -->
 	<h3>examples</h3>
+	The available icons are :
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>code</th>
-				<th>result</th>
+				<th scope="col">code</th>
+				<th scope="col">icon</th>
 			</tr>
 		</thead>
 		<tbody>
+			{{#each iconList}}
 			<tr>
-				<td><pre>{{|> code to test
-}}</pre></td>
-				<td>code execution result</td>
+				<td><code>{{|> icon name="{{.}}"}}</code></td>
+				<td>{{> icon name=.}}</td>
 			</tr>
+			{{/each}}
 		</tbody>
 	</table>
-	<p>You can see more example in the tests hereunder.</p>
-
+	
 	<!-- =============================================== -->
 	<h3>parameters</h3>
 	<table class="table table-striped">
@@ -35,42 +36,22 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><code>example</code></td>
+				<td><code>name</code></td>
 				<td class="text-center">-</td>
 				<td><code>::String</code></td>
-				<td>An example of parameter.</td>
+				<td>the name of the icon to display.</td>
 			</tr>
 		</tbody>
 	</table>
 	
 	<!-- =============================================== -->
 	<h3>how does it works ?</h3>
-	<p>Short explanation.</p>
+	<p>The available icons are defined in the <code>/client/modules_myApp/client_PARMS.js</code> file, <code>icons</code> property : for each available icon name, the associated <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Fontawesome</a> (free collection) icon class is defined :</p>
+	<pre><code>{{iconListJS}}</code></pre>
 	
-	<!-- =============================================== -->
-	<h3>tests</h3>
-	<h4>tests <code>parameter to test</code></h4>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>code</th>
-				<th>result</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					Test explanation<br/>
-					<pre>{{|> code to be tested}}</pre>
-				</td>
-				<td>result</td>
-			</tr>
-		</tbody>
-	</table>
-
 	<!-- =============================================== -->
 	<h3>enhancements</h3>
 	<ul>
-		<li>enhancement item.</li>
+		<li>Nothing at the moment.</li>
 	</ul>
 </template>

@@ -25,5 +25,13 @@ client_PARMS = {
 	"tenantSelect_allowedPathContains" : [
 		"/configuration",
 		"/dev/component_doc/tenantSelect/_builtInTemplateDOC" // to be displayed on template documentation !
-	]	
+	],
+	"devDoc_chapters" : [
+		// ---------------------------------------------
+		// Attention : no suffix should be included in another one !
+		// ---------------------------------------------
+		{chapter:"my-app templates",	suffix:"_myAppTemplateDOC"},
+		{chapter:"built-in templates",	suffix:"_builtInTemplateDOC"},
+		{chapter:"components",			suffix:"_DOC"}
+	]
 };

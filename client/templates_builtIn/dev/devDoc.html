@@ -1,4 +1,4 @@
-<template name="component_doc">
+<template name="devDoc">
 	<div class="row">
 		<div class="col-md-3">
 			<h2>{{> icon name="dev"}} documentation</h2>
@@ -7,7 +7,7 @@
 				<ul>
 					{{#with componentsList suffix}}
 						{{#each .}}
-							<li><a href="/dev/component_doc/{{.}}/{{../../suffix}}">{{.}}</a></li>
+							<li><a href="/dev/doc/{{.}}/{{../../suffix}}">{{.}}</a></li>
 						{{/each}}
 					{{else}}
 						No documentation available

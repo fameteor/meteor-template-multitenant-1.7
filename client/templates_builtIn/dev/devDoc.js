@@ -1,4 +1,4 @@
-Template.component_doc.helpers({
+Template.devDoc.helpers({
 	componentsList(suffix) {
 		// We list the names of the components having doc
 		var componentsList = [];
@@ -20,7 +20,7 @@ Template.component_doc.helpers({
 		return FlowRouter.getParam("suffix");
 	},
 	chaptersList() {
-		return component_doc_PARMS;
+		return client_PARMS.devDoc_chapters;
 	}
 });
 

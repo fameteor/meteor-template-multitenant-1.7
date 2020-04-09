@@ -40,7 +40,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="admin"}} {{_  "routerNavBar.adminMenu.title"}}<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								{{#if isInRole 'CAN_ADMIN_TENANTS'}}
-									<li class="{{isActivePath '/admin/organisations'}}"><a href="/admin/organisations">{{_  "routerNavBar.adminMenu.tenantManagement"}}</a></li>
+									<li class="{{isActivePath '/admin/tenants'}}"><a href="/admin/tenants">{{_  "routerNavBar.adminMenu.tenantManagement"}}</a></li>
 								{{/if}}
 								{{#if isInRole 'CAN_ADMIN_USERS'}}
 									<li class="{{isActivePath '/admin/users'}}"><a href="/admin/users">{{_  "routerNavBar.adminMenu.usersManagement"}}</a></li>
@@ -53,7 +53,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{> icon name="dev"}} {{_  "routerNavBar.devMenu.title"}}<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="{{isActivePath regex='^/dev/schemasDoc'}}"><a href="/dev/schemasDoc">{{_  "routerNavBar.devMenu.schemasDoc"}}</a></li>
-								<li class="{{isActivePath regex='^/dev/component_doc'}}"><a href="/dev/component_doc">{{_  "routerNavBar.devMenu.tplDoc"}}</a></li>
+								<li class="{{isActivePath regex='^/dev/doc'}}"><a href="/dev/doc">{{_  "routerNavBar.devMenu.tplDoc"}}</a></li>
 							</ul>
 						</li>
 					{{/if}}

@@ -1,9 +1,10 @@
 {
 	"common_PARMS" : {
 		"permissions" : {
-			"CAN_ADMIN_ORGANISATIONS": "peut gérer les organisations",
-			"CAN_ADMIN_USERS":	"peut gérer les utilisateurs",
-			"IS_DEVELOPER":	"est développeur"
+			"CAN_ADMIN_ORGANISATIONS": 	"peut gérer les organisations",
+			"CAN_ADMIN_USERS":			"peut gérer les utilisateurs",
+			"IS_DEVELOPER":				"est développeur",
+			"CAN_MANAGE_CREDENTIALS": 	"peut gérer les certificats"
 		}
 	}
 }

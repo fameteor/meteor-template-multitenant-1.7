@@ -1,9 +1,10 @@
 {
 	"common_PARMS" : {
 		"permissions" : {
-			"CAN_ADMIN_ORGANISATIONS": "can manage organisations",
-			"CAN_ADMIN_USERS":	"can manage users",
-			"IS_DEVELOPER":	"is developer"
+			"CAN_ADMIN_ORGANISATIONS": 	"can manage organisations",
+			"CAN_ADMIN_USERS":			"can manage users",
+			"IS_DEVELOPER":				"is developer",
+			"CAN_MANAGE_CREDENTIALS": 	"can manage credentials"
 		}
 	}
 }

@@ -1,5 +1,12 @@
 {
 	"routerNavBar" : {
+		"configurationMenu": {
+			"title":					"configuration",
+			"credentials":				"credentials",
+			"counters":					"data counters",
+			"reports":					"reports",
+			"alerts":					"alerts"			
+		},
 		"adminMenu" :	{
 			"title" : "admin",
 			"organisationsManagement" : "organisations management",

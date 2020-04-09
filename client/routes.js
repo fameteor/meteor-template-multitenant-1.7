@@ -27,9 +27,15 @@ FlowRouter.subscriptions = function(params, queryparams) {
 	this.register('organisations.myOrAllForAdmin', Meteor.subscribe('organisations.myOrAllForAdmin'));
 }
 
+// To run once only
+let onGlobalSubscriptionLoadedRun = false;
 Tracker.autorun(function() {
 	if (FlowRouter.subsReady()) {
+		if (!onGlobalSubscriptionLoadedRun) {
+			onGlobalSubscriptionLoadedRun = true;
+			onGlobalCollectionsLoaded();
 		Session.set('waitingStatus', false);
+		}
 	}
 });
 

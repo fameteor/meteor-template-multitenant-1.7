@@ -1,0 +1,18 @@
+<template name="routerOrganisationSelect">
+	<form class="navbar-form navbar-left">
+		<div class="form-group">
+			{{#if allowedPath}}
+				{{#with organisationsList}}
+					{{#if (hlp_gt (hlp_count .) 1)}}
+						<select type="text" class="form-control organisationSelect">
+							{{#each .}}
+								<option value="{{_id}}" {{hlp_selectedIf (hlp_eq _id (hlp_sessionVar "selectedOrganisationId"))}}>organisation : {{label}}</option>
+							{{/each}}
+						</select>
+					{{/if}}
+				{{/with}}
+			{{/if}}
+		</div>
+	</form>
+</template>
+

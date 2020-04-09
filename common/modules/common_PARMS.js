@@ -4,6 +4,7 @@ common_PARMS = {
 	"permissions" : [
 		"CAN_ADMIN_ORGANISATIONS",
 		"CAN_ADMIN_USERS",
-		"IS_DEVELOPER"
+		"IS_DEVELOPER",
+		"CAN_MANAGE_CREDENTIALS"
 	],
 };

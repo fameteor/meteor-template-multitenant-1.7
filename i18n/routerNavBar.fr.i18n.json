@@ -1,14 +1,21 @@
 {
 	"routerNavBar" : {
+		"configurationMenu": {
+			"title":					"configuration",
+			"credentials":				"certificats",
+			"counters":					"compteurs de connées",
+			"reports":					"rapports",
+			"alerts":					"alertes"			
+		},
 		"adminMenu" :	{
-			"title" : "admin",
+			"title" : 					"admin",
 			"organisationsManagement" : "gestion des organisations",
-			"usersManagement" : "gestion des utilisateurs"
+			"usersManagement" : 		"gestion des utilisateurs"
 		},
 		"devMenu" :	{
-			"title" : 		"dev",
-			"tplDoc": 		"documentation des templates",
-			"schemasDoc":	"schémas des données"
+			"title" : 					"dev",
+			"tplDoc": 					"documentation des templates",
+			"schemasDoc":				"schémas des données"
 		}
 	}
 }

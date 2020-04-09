@@ -21,5 +21,9 @@ client_PARMS = {
 		"connectedUser":	"fas fa-user",
 		"nonConnectedUser":	"fas fa-user-slash",
 		"schemaAutovalue":	"fa fa-cog fa-spin"
-	}
+	},
+	"routerOrganisationSelect_allowedPathContains" : [
+		"/configuration",
+		"/dev/component_doc/routerOrganisationSelect/_builtInTemplateDOC" // to be displayed on template documentation !
+	]	
 };

@@ -1,0 +1,36 @@
+<template name="devDebug_builtInTemplateDOC">
+	<!-- =============================================== -->
+	<h3>purpose</h3>
+	The <code>devDebug</code> template is used in debug for displaying the current Meteor data context.
+	
+	<!-- =============================================== -->
+	<h3>examples</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>code</th>
+				<th>result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><pre>{{|#with number = 2 string = "trial"}}
+	{{|> devDebug}}
+{{|/with}}</pre></td>
+				<td>{{#with number = 2 string = "trial"}}
+	{{> devDebug}}
+{{/with}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- =============================================== -->
+	<h3>parameters</h3>
+	<p>This template do not have any parameter.</p>
+
+	<!-- =============================================== -->
+	<h3>enhancements</h3>
+	<ul>
+		<li>Nothing at the moment.</li>
+	</ul>
+</template>

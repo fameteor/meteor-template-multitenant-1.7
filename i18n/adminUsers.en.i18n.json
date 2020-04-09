@@ -11,7 +11,7 @@
 		"noSelfDeletionMsg":	"self deletion is impossible",
 		"noAdminDeletionMsg":	"admin deletion is impossible",
 		"deletionImpossibleMsg":"this user deletion is impossible",
-		"organisations":		"organisations",
-		"noOrganisationMsg":	"no organisation associated to this user"
+		"tenants":				"tenants",
+		"noTenantMsg":			"no organisation associated to this user"
 	}
 }

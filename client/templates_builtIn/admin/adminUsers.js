@@ -42,8 +42,8 @@ Template.adminUsers.helpers({
 		}
 		else return "disabled";
 	},
-	thisUserOrganisationsList() {
-		return Organisations.find({administrators:this._id}).fetch();
+	thisUserTenantsList() {
+		return Tenants.find({administrators:this._id}).fetch();
 	}
 });
 

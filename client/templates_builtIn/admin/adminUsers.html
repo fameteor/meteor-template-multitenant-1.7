@@ -18,7 +18,7 @@
 							<th>{{_ "adminUsers.email"}}</th>
 							<th>{{_ "adminUsers.lastConnection"}}</th>
 							<th>{{_ "adminUsers.permissions"}}</th>
-							<th>{{_ "adminUsers.organisations"}}</th>
+							<th>{{_ "adminUsers.tenants"}}</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -45,14 +45,14 @@
 								</ul>
 							</td>
 							<td>
-								{{#with thisUserOrganisationsList}}
+								{{#with thisUserTenantsList}}
 									<ul>
 										{{#each .}}
 											<li>{{label}}</li>
 										{{/each}}
 									</ul>
 								{{else}}
-									{{_ "adminUsers.noOrganisationMsg"}}
+									{{_ "adminUsers.noTenantMsg"}}
 								{{/with}}
 							</td>
 							<td>

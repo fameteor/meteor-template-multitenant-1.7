@@ -2,8 +2,8 @@
 	"routerNavBar" : {
 		"configurationMenu": {
 			"title":					"configuration",
-			"credentials":				"credentials",
-			"counters":					"data counters",
+			"serviceSettings":			"services settings",
+			"serviceActivation":		"services activation",
 			"reports":					"reports",
 			"alerts":					"alerts"			
 		},

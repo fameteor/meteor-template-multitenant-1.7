@@ -2,8 +2,8 @@
 	"routerNavBar" : {
 		"configurationMenu": {
 			"title":					"configuration",
-			"credentials":				"certificats",
-			"counters":					"compteurs de connées",
+			"serviceSettings":			"paramétrage des services",
+			"serviceActivation":		"activation des services",
 			"reports":					"rapports",
 			"alerts":					"alertes"			
 		},

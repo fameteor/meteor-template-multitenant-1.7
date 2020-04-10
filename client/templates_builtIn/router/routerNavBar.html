@@ -25,9 +25,9 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{_  "routerNavBar.configurationMenu.title"}}<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							{{#if isInRole 'CAN_MANAGE_CREDENTIALS'}}
-								<li class="{{isActivePath '/configuration/credentials'}}"><a href="/configuration/credentials">{{_  "routerNavBar.configurationMenu.credentials"}}</a></li>
+								<li class="{{isActivePath '/configuration/serviceSettings'}}"><a href="/configuration/serviceSettings">{{_  "routerNavBar.configurationMenu.serviceSettings"}}</a></li>
 							{{/if}}
-							<li class="{{isActivePath '/configuration/counters'}}"><a href="/configuration/counters">{{_  "routerNavBar.configurationMenu.counters"}}</a></li>
+							<li class="{{isActivePath '/configuration/serviceActivation'}}"><a href="/configuration/serviceActivation">{{_  "routerNavBar.configurationMenu.serviceActivation"}}</a></li>
 							<li class="{{isActivePath '/configuration/reports'}}"><a href="/configuration/reports">{{_  "routerNavBar.configurationMenu.reports"}}</a></li>
 							<li class="{{isActivePath '/configuration/alerts'}}"><a href="/configuration/alerts">{{_  "routerNavBar.configurationMenu.alerts"}}</a></li>
 						</ul>

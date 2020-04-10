@@ -24,7 +24,7 @@ client_PARMS = {
 	},
 	"tenantSelect_allowedPathContains" : [
 		"/configuration",
-		"/dev/component_doc/tenantSelect/_builtInTemplateDOC" // to be displayed on template documentation !
+		"/dev/doc/tenantSelect/_builtInTemplateDOC" // to be displayed on template documentation !
 	],
 	"devDoc_chapters" : [
 		// ---------------------------------------------

@@ -22,6 +22,7 @@ Template.tenantManagement.events({
 	'click #add'(e,tpl){
 		e.preventDefault();
 		Modal.show("tenantManagementEditModal",{action:"INSERT"},{backdrop:'static',keyboard:false});
+		AutoForm.resetForm("insertTenantForm");
 	},
 	'click .modify'(e,tpl){
 		e.preventDefault();

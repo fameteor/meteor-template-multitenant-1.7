@@ -52,6 +52,7 @@ Template.adminUsers.events({
 	'click #addUser'(e,tpl){
 		e.preventDefault();
 		Modal.show("adminUsersEditModal",{action:"INSERT"},{backdrop:'static',keyboard:false});
+		AutoForm.resetForm("insertUserForm");
 	},
 	'click .modifyUser'(e,tpl){
 		e.preventDefault();

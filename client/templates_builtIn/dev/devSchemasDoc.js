@@ -43,9 +43,9 @@ Template.devSchemasDoc.helpers({
 			var defs = this.value.type.definitions[0];
 			if (defs.min || defs.max || defs.allowedValues || defs.regEx) {
 				// If there is a min
-				if (defs.min) result += "minimum value : " + defs.min + "<br/>";
+				if (defs.min || defs.min === 0) result += "minimum value : " + defs.min + "<br/>";
 				// If there is a max
-				if (defs.max) result += "maximum value : " + defs.max + "<br/>";
+				if (defs.max || defs.max === 0) result += "maximum value : " + defs.max + "<br/>";
 				// If there is a list of values
 				if (defs.allowedValues) {
 					if (typeof defs.allowedValues === "function")	result += "<pre>::" + JSON.stringify(defs.allowedValues(),null,4) + "</pre>";
